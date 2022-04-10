@@ -1,19 +1,28 @@
-import Button from "./components/Button";
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import Search from "./components/Search";
+import Content from "./components/Content";
 import "./style/index.css";
-import "./style/index.scss";
 
-class Hello extends React.Component {
-    render(){
-        return <div className="main-container">
-            <h1 className="greeting">Hello, {this.props.name}</h1>
-            <Button />
-        </div>;
+export default function App() {
+    
+    const [search,setSearch] = useState("");
+    function updateSearch(newSearch){
+        setSearch(newSearch)
     }
+
+    return(
+        <section className="album">
+            <Search updateSearch={updateSearch}/>
+            <Content search={search}/>
+        </section>
+    )
+    
 }
 
+
 ReactDOM.render(
-    <Hello name="David"/>,
+    <App />,
     document.getElementById("root")
 );
+
