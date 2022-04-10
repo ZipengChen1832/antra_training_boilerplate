@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+.main-container {
+    margin-top: 4rem;
+    padding: 1rem;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 4rem;
+}
+
+.greeting {
+    font-weight: bolder;
+}
